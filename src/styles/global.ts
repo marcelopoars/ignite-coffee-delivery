@@ -9,17 +9,21 @@ export const GlobalStyle = createGlobalStyle`
 
 :focus-visible {
   outline: 0;
-  box-shadow: 0 0 0 2px ${({ theme }) => theme['gray-500']};
+  box-shadow: 0 0 0 2px ${({ theme }) => theme['purple-500']};
   border-radius: 2px;
 }
 
 body {
-  background-color: ${({ theme }) => theme['gray-100']};
+  background-color: ${({ theme }) => theme['gray-50']};
   color: ${({ theme }) => theme['gray-900']};
 }
 
 button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 ul {

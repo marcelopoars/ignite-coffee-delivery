@@ -29,7 +29,7 @@ export const HeaderContainer = styled.section`
   }
 
   @media screen and (min-width: 768px) {
-    padding: 2rem 3rem;
+    padding: 2rem 3rem 7.25rem;
   }
 
   @media screen and (min-width: 1024px) {
