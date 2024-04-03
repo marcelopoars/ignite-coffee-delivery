@@ -15,8 +15,6 @@ import {
   ChangeQuantityOfItens,
 } from './styled';
 
-import expressoImage from '../../../../assets/cafes/expresso-tradicional.png';
-
 export function Cafes() {
   function formatCurrency(value: number) {
     return new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 }).format(value);
@@ -27,9 +25,9 @@ export function Cafes() {
       <h2>Nossos cafés</h2>
 
       <CafesList>
-        {cafes.map(({ name, description, price, details }) => (
+        {cafes.map(({ name, description, price, details, image }) => (
           <CafeItem key={name}>
-            <img src={expressoImage} alt={name} />
+            <img src={image} alt={name} />
 
             <DetailList>
               {details.map((detail) => (

@@ -43,6 +43,8 @@ export const CafeItem = styled.article`
     top: -1.5rem;
     left: 50%;
     transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
   }
 
   h3 {
@@ -78,12 +80,12 @@ export const DetailList = styled.ul`
 `;
 
 export const DetailItem = styled.li`
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
 
-  background-color: ${({ theme }) => theme['yellow-100']};
-  color: ${({ theme }) => theme['yellow-700']};
+  background-color: ${({ theme }) => theme['purple-100']};
+  color: ${({ theme }) => theme['purple-700']};
   padding: 0.25rem 0.5rem;
   border-radius: 100px;
 
