@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CafesContainer = styled.section`
+export const CoffeeContainer = styled.section`
   max-width: 76rem;
   margin: 0 auto;
   padding: 1.5rem;
@@ -19,7 +19,7 @@ export const CafesContainer = styled.section`
   }
 `;
 
-export const CafesList = styled.ul`
+export const CoffeeList = styled.ul`
   display: grid;
   gap: 2.5rem 2rem;
 
@@ -32,7 +32,7 @@ export const CafesList = styled.ul`
   }
 `;
 
-export const CafeItem = styled.article`
+export const CoffeeItem = styled.article`
   background-color: ${({ theme }) => theme['gray-100']};
   padding: 7rem 1.25rem 1.25rem;
   border-radius: 0.5rem 2rem;
@@ -145,6 +145,11 @@ export const ChangeQuantityOfItens = styled.div`
     &:active {
       color: ${({ theme }) => theme['purple-500']};
       background-color: ${({ theme }) => theme['gray-200']};
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
     }
   }
 

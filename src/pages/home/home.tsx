@@ -1,10 +1,10 @@
-import { Cafes, Hero } from './_components';
+import { Coffees } from "./_components";
 
 export function Home() {
   return (
     <main>
-      <Hero />
-      <Cafes />
+      {/* <Hero /> */}
+      <Coffees />
     </main>
   );
 }

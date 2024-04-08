@@ -30,6 +30,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body, input, textarea, button {
   font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
