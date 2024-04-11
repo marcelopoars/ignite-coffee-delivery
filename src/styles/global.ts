@@ -9,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
 
 :focus-visible {
   outline: 0;
-  box-shadow: 0 0 0 2px ${({ theme }) => theme['purple-500']};
-  border-radius: 2px;
+  box-shadow: 0 0 0 2px ${({ theme }) => theme['yellow-700']};
+  border-radius: 4px;
 }
 
 body {

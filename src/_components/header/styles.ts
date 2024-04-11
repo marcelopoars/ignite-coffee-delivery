@@ -39,6 +39,22 @@ export const Location = styled.span`
   }
 `;
 
+export const ShoppingCartLink = styled(NavLink)`
+  background-color: ${({ theme }) => theme['yellow-100']};
+  color: ${({ theme }) => theme['yellow-700']};
+
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  line-height: 0;
+  position: relative;
+
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+`;
+
 export const Badge = styled.div`
   position: absolute;
   top: -0.5rem;
@@ -59,26 +75,4 @@ export const Badge = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-export const ShoppingCartLink = styled(NavLink)`
-  background-color: ${({ theme }) => theme['yellow-100']};
-  color: ${({ theme }) => theme['yellow-700']};
-
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  line-height: 0;
-  position: relative;
-
-  transition: all 0.2s;
-
-  &:hover {
-    background-color: ${({ theme }) => theme['yellow-700']};
-    color: ${({ theme }) => theme['yellow-100']};
-
-    ${Badge} {
-      background-color: ${({ theme }) => theme['yellow-100']};
-      color: ${({ theme }) => theme['yellow-700']};
-    }
-  }
 `;

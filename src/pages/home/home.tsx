@@ -1,9 +1,9 @@
-import { Coffees } from "./_components";
+import { Coffees, Hero } from "./_components";
 
 export function Home() {
   return (
     <main>
-      {/* <Hero /> */}
+      <Hero />
       <Coffees />
     </main>
   );

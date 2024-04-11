@@ -14,6 +14,7 @@ import {
   DetailList,
   Price,
 } from './styled';
+import { formatCurrency } from '../../../../utils';
 
 type CoffeeDetail = 'Tradicional' | 'Gelado' | 'Com leite' | 'Especial' | 'Alcoólico';
 
@@ -36,10 +37,6 @@ export function CoffeItem({ coffee }: CoffeeProps) {
   const { addCoffeeToCart } = useCart();
 
   const { id, image, name, description, price, details } = coffee;
-
-  function formatCurrency(value: number) {
-    return new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 }).format(value);
-  }
 
   function handleIncrementItem() {
     setQuantity((state) => state + 1);
@@ -72,7 +69,7 @@ export function CoffeItem({ coffee }: CoffeeProps) {
 
       <CafeFooter>
         <Price>
-          R$ <strong>{formatCurrency(price)}</strong>
+          R$ <span>{formatCurrency(price)}</span>
         </Price>
 
         <Actions>

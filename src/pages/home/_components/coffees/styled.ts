@@ -106,7 +106,7 @@ export const Price = styled.span`
   font-size: 0.875rem;
   color: ${({ theme }) => theme['gray-700']};
 
-  strong {
+  span {
     font-family: 'Baloo 2';
     font-size: 1.5rem;
     font-weight: 700;
