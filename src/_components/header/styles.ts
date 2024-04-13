@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
+  width: 100%;
   max-width: 76rem;
   margin: 0 auto;
   padding: 1.5rem;
@@ -16,7 +17,7 @@ export const HeaderContainer = styled.header`
     gap: 0.75rem;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     padding: 2rem 3rem;
   }
 `;

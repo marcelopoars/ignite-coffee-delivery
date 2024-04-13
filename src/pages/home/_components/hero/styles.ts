@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.section`
+import backgroundImage from '../../../../assets/hero/background.png';
+
+export const HeroContainer = styled.section`
+  background-image: url(${backgroundImage});
+  background-size: contain;
+`;
+
+export const HeroContent = styled.section`
   max-width: 76rem;
   margin: 0 auto;
   padding: 1.5rem;
@@ -10,8 +17,25 @@ export const HeaderContainer = styled.section`
   align-items: center;
   gap: 2rem;
 
+  img {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 2rem 3rem 7.25rem;
+
+    img {
+      display: block;
+      max-width: 476px;
+    }
+  }
+`;
+
+export const TextBox = styled.div`
   h1 {
-    max-width: 588px;
     font-family: 'Baloo 2', sans-serif;
     font-size: 3rem;
     font-style: normal;
@@ -19,23 +43,15 @@ export const HeaderContainer = styled.section`
   }
 
   p {
-    max-width: 500px;
     margin-top: 1rem;
     font-size: 1.5rem;
   }
 
-  img {
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 2rem 3rem 7.25rem;
-  }
-
   @media screen and (min-width: 1024px) {
-    img {
-      display: block;
-      max-width: 476px;
+    min-width: 490px;
+
+    p {
+      max-width: 500px;
     }
   }
 `;

@@ -7,13 +7,23 @@ export const CheckoutCartContainer = styled.div`
     font-weight: 800;
     margin-bottom: 1rem;
   }
+
+  @media screen and (min-width: 768px) {
+  }
+  
+  @media screen and (min-width: 1024px) {
+    min-width: 448px;
+  }
 `;
 
 export const CheckoutCartCard = styled.div`
   background-color: ${({ theme }) => theme['gray-100']};
-  padding: 2.5rem;
-
   border-radius: 6px 44px;
+  padding: 1.5rem;
+
+  @media screen and (min-width: 1024px) {
+    padding: 2.5rem;
+  }
 `;
 
 export const CheckoutCartSummary = styled.div`

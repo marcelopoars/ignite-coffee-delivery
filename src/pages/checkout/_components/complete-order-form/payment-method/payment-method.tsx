@@ -6,6 +6,7 @@ import { CheckoutFormData } from '../../../checkout';
 
 import { PaymentMethodContainer, PaymentMethodHeader, PaymentMethodOptions } from './styles';
 import { PaymentMethodOption } from './payment-method-option';
+import { ErrorMessage } from '../error-message';
 
 export const paymentMethods = {
   credit: {
@@ -38,19 +39,21 @@ export function PaymentMethod() {
         </div>
       </PaymentMethodHeader>
 
-      <PaymentMethodOptions>
-        {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
-          <PaymentMethodOption
-            key={label}
-            id={key}
-            icon={icon}
-            label={label}
-            value={key}
-            {...register('paymentMethod')}
-          />
-        ))}
-      </PaymentMethodOptions>
-      {errors.paymentMethod && <span>{errors.paymentMethod.message}</span>}
+      <div>
+        <PaymentMethodOptions>
+          {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
+            <PaymentMethodOption
+              key={label}
+              id={key}
+              icon={icon}
+              label={label}
+              value={key}
+              {...register('paymentMethod')}
+            />
+          ))}
+        </PaymentMethodOptions>
+        {errors.paymentMethod && <ErrorMessage error={errors.paymentMethod.message} />}
+      </div>
     </PaymentMethodContainer>
   );
 }

@@ -14,7 +14,7 @@ export const CoffeeContainer = styled.section`
     margin-bottom: 3.5rem;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     padding: 2rem 3rem;
   }
 `;
@@ -23,8 +23,12 @@ export const CoffeeList = styled.ul`
   display: grid;
   gap: 2.5rem 2rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media screen and (min-width: 1024px) {

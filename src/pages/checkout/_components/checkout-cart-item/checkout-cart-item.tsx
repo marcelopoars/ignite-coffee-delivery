@@ -9,6 +9,8 @@ import {
   CheckoutCartItemContainer,
   CheckoutCartItemTitle,
   CheckoutCartPrice,
+  Content,
+  Header,
   RemoveItemButton,
 } from './styles';
 import { useCart } from '../../../../hooks';
@@ -22,15 +24,15 @@ export function CheckoutCartItem({ coffee }: CheckoutCartItemProps) {
   const { id, name, price, image, quantity } = coffee;
 
   function handleIncrementItem() {
-    changeCoffeeQuantity(id, 'increment')
+    changeCoffeeQuantity(id, 'increment');
   }
 
   function handleDecrementItem() {
-    changeCoffeeQuantity(id, 'decrement')
+    changeCoffeeQuantity(id, 'decrement');
   }
 
   function handleRemoveCoffeeFromCart() {
-    removeCoffeeFromCart(id)
+    removeCoffeeFromCart(id);
   }
 
   const totalCoffee = formatCurrency(price * quantity);
@@ -39,8 +41,11 @@ export function CheckoutCartItem({ coffee }: CheckoutCartItemProps) {
   return (
     <CheckoutCartItemContainer>
       <img src={image} alt={name} />
-      <div style={{ flex: 1 }}>
-        <CheckoutCartItemTitle>{name}</CheckoutCartItemTitle>
+      <Content>
+        <Header>
+          <CheckoutCartItemTitle>{name}</CheckoutCartItemTitle>
+          <CheckoutCartPrice>R$ {totalCoffee}</CheckoutCartPrice>
+        </Header>
         <Actions>
           <ChangeQuantityOfItens>
             <button type="button" onClick={handleDecrementItem} disabled={disabledButton}>
@@ -52,12 +57,11 @@ export function CheckoutCartItem({ coffee }: CheckoutCartItemProps) {
             </button>
           </ChangeQuantityOfItens>
           <RemoveItemButton onClick={handleRemoveCoffeeFromCart}>
-            <Trash />
+            <Trash size={16} />
             <span>Remover</span>
           </RemoveItemButton>
         </Actions>
-      </div>
-      <CheckoutCartPrice>R$ {totalCoffee}</CheckoutCartPrice>
+      </Content>
     </CheckoutCartItemContainer>
   );
 }

@@ -5,12 +5,16 @@ export const CheckoutContainer = styled.form`
   margin: 0 auto;
   padding: 1.5rem;
 
-  display: grid;
-  gap: 2rem;
-
+  display: flex;
+  flex-direction: column;
+  
   @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  
+  @media screen and (min-width: 1024px) {
     padding: 2rem 3rem;
-
-    grid-template-columns: 2fr 448px;
+    gap: 2rem;
   }
 `;

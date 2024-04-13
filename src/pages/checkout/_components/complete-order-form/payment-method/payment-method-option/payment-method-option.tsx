@@ -11,12 +11,10 @@ export const PaymentMethodOption = forwardRef<HTMLInputElement, PaymentMethodOpt
     return (
       <PaymentMethodOptionContainer>
         <input id={id} type="radio" {...props} name="paymentMethod" ref={ref} />
-        <label htmlFor={id}>
-          <ContentContainer>
-            {icon}
-            {label}
-          </ContentContainer>
-        </label>
+        <ContentContainer htmlFor={id}>
+          {icon}
+          {label}
+        </ContentContainer>
       </PaymentMethodOptionContainer>
     );
   },

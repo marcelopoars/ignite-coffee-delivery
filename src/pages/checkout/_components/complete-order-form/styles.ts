@@ -7,9 +7,13 @@ export const CompleteOrderFormContainer = styled.div`
 
 export const BaseStyleWraper = styled.div`
   background-color: ${({ theme }) => theme['gray-100']};
-  padding: 2.5rem;
-  border-radius: 6px;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
 
   display: grid;
   gap: 2rem;
+
+  @media screen and (min-width: 1024px) {
+    padding: 2.5rem;
+  }
 `;

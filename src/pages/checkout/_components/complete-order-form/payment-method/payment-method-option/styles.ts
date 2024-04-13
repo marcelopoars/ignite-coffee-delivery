@@ -1,16 +1,17 @@
 import styled, { css } from 'styled-components';
 
 export const PaymentMethodOptionContainer = styled.div`
-  label {
-    cursor: pointer;
-  }
+  flex: 1;
+  display: flex;
+  position: relative;
 
   input {
     visibility: hidden;
     appearance: none;
+    position: absolute;
   }
 
-  input:checked + label div {
+  input:checked + label {
     ${({ theme }) => css`
       background-color: ${theme['purple-100']};
       border-color: ${theme['purple-700']};
@@ -22,22 +23,24 @@ export const PaymentMethodOptionContainer = styled.div`
   }
 `;
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled.label`
+  width: 100%;
+  flex: 1;
   height: 3rem;
   padding: 0 1rem;
   background-color: ${({ theme }) => theme['gray-300']};
   border: 1px solid ${({ theme }) => theme['gray-300']};
-  border-radius: 6px;
-  user-select: none;
-
+  border-radius: 0.5rem;
+  
   color: ${({ theme }) => theme['gray-700']};
   font-size: 0.75rem;
   text-transform: uppercase;
   white-space: nowrap;
-  
+  user-select: none;
+  cursor: pointer;
+
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 0.75rem;
 
   transition: 0.2s;
@@ -49,5 +52,4 @@ export const ContentContainer = styled.div`
   &:hover {
     background-color: ${({ theme }) => theme['gray-500']};
   }
-
 `;

@@ -1,9 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CheckoutCartItemContainer = styled.li`
   display: flex;
-  justify-content: space-between;
-  gap: 1.25rem;
+  gap: 0.5rem;
 
   border-bottom: 1px solid ${({ theme }) => theme['gray-300']};
   padding-bottom: 1rem;
@@ -13,17 +12,36 @@ export const CheckoutCartItemContainer = styled.li`
   }
 
   img {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
+
+  @media screen and (min-width: 1024px) {
+    gap: 1.25rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+`;
+
+export const Content = styled.div`
+  flex: 1;
+`;
+
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const CheckoutCartItemTitle = styled.h3`
   color: ${({ theme }) => theme['gray-800']};
   font-size: 1rem;
   font-weight: 400;
-
-  margin-bottom: 0.5rem;
 `;
 
 export const CheckoutCartPrice = styled.span`

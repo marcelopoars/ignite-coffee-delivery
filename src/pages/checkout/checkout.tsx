@@ -15,7 +15,7 @@ enum PaymentMethods {
 }
 
 const checkoutSchema = z.object({
-  cep: z.string().min(1, 'Campo obrigatório'),
+  cep: z.string().min(9, 'Campo obrigatório'),
   street: z.string().min(1, 'Campo obrigatório'),
   number: z.string().min(1, 'Campo obrigatório'),
   complement: z.string(),
@@ -32,11 +32,12 @@ const checkoutSchema = z.object({
 export type CheckoutFormData = z.infer<typeof checkoutSchema>;
 
 export function Checkout() {
-  const { cleanCart } = useCart();
   const navigate = useNavigate();
+  
+  const { cleanCart } = useCart();
 
   const checkoutForm = useForm<CheckoutFormData>({
-    mode: 'onSubmit',
+    mode: 'onBlur',
     resolver: zodResolver(checkoutSchema),
     defaultValues: {
       cep: '',

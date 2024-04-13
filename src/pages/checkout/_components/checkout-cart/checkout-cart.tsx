@@ -21,11 +21,11 @@ export function CheckoutCart() {
       <h2>Cafés selecionados</h2>
 
       <CheckoutCartCard>
+        {!cartItems.length && <strong>Nenhum item na lista.</strong>}
+
         {!!cartItems.length && (
           <ul>{cartItems?.map((coffee) => <CheckoutCartItem key={coffee.id} coffee={coffee} />)}</ul>
         )}
-
-        {!cartItems.length && <strong>Nenhum item na lista.</strong>}
 
         <CheckoutCartSummary>
           <CheckoutCartSummaryRow>

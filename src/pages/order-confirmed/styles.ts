@@ -26,9 +26,17 @@ export const OrderConfirmedContainer = styled.section`
 export const Row = styled.div`
   margin-top: 2.5rem;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   gap: 3rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    gap: 3rem;
+  }
 `;
 
 export const OrderDetailsList = styled.ul`
@@ -51,8 +59,8 @@ export const Flex = styled.li`
 `;
 
 export const BoxIconBase = styled.div`
-  width: 2rem;
-  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
   border-radius: 50%;
   background-color: purple;
 
@@ -78,9 +86,12 @@ export const CurrencyDollarIconBox = styled(BoxIconBase)`
 `;
 
 export const BoxImage = styled.div`
-  display: none;
+
+  img {
+    width: 100%;
+  }
 
   @media screen and (min-width: 768px) {
-    display: block;
+    /*  */
   }
 `;

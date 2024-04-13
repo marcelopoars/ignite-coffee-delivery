@@ -53,9 +53,20 @@ export const InputContainter = styled.div``;
 
 export const Flex = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 1rem;
 
   > div {
     flex: 1;
   }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
+
+export const GridTwoColumns = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+`

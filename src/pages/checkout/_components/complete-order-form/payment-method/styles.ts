@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { BaseStyleWraper } from '../styles';
 
 export const PaymentMethodContainer = styled(BaseStyleWraper)`
@@ -22,7 +23,11 @@ export const PaymentMethodHeader = styled.div`
 `;
 
 export const PaymentMethodOptions = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
+
+  @media screen and (min-width: 640px) {
+    /*  */
+  }
 `;
